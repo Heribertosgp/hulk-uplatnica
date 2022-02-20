@@ -10,7 +10,7 @@ exec 3<"../hulk-clanstvo.csv"
 		IME=`echo "$IME_PREZIME" | awk -F " " '{print $1;}'`
 		PREZIME=`echo "$IME_PREZIME" | awk -F " " '{print $2;}'`
 		OIB=`echo "$LINE" | awk -F "," '{print $2;}'`
-		cp oib-ime_prezime.py ../kreirane-uplatnice/$GODINA/$GODINA-$OIB-$IME"_"$PREZIME.py
+		cp hulk-oib-ime_prezime.py ../kreirane-uplatnice/$GODINA/$GODINA-$OIB-$IME"_"$PREZIME.py
 		sed -i "s/OIB/$OIB/" "../kreirane-uplatnice/$GODINA/$GODINA-$OIB-$IME"_"$PREZIME.py"
 		sed -i "s/IME/$IME/" "../kreirane-uplatnice/$GODINA/$GODINA-$OIB-$IME"_"$PREZIME.py"
 		sed -i "s/PREZIME/$PREZIME/" "../kreirane-uplatnice/$GODINA/$GODINA-$OIB-$IME"_"$PREZIME.py"
